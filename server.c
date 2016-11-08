@@ -29,7 +29,7 @@ int main(int argc, char const *argv[])
 
 	char message[20];
 
-	while(1){
+	while(players_connected < 2){
 		receive_message(rec_msgq_id, message);
 		printf("Message received: %s\n", message);
 		do_action(message);
